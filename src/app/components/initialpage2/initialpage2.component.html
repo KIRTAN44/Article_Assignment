@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-1" routerLink="/home" style="margin-left: 4rem; font-weight: bold;" >ArtBlogs!!!</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarNav"
+        data-target="#navbarNav" aria-controls="navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        =
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/artblogshome" style="cursor: pointer;">Home</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/userdata" style="cursor: pointer; width: 100%;">View Users</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>  -->
+          <!-- <button type="button" class="btn btn-success btn-md float-right nav-item" style="cursor: pointer; margin-left: 50rem; " 
+            >Add Article</button> -->
+            <button type="button" class="btn btn-secondary btn-md float-right nav-item" style="cursor: pointer; margin-left: 55rem;" (click)="openPopup()"
+            >Your Profile</button>
+            <button type="button" class="btn btn-danger btn-md float-right nav-item" style="cursor: pointer;" (click)="goToLogout()"
+            >Logout</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayStyle }"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Your Profile</h4>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editU"  novalidate>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Current Email:</label>
+              <br/>
+              <h3>{{ email }}</h3>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Update Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter New Email" formControlName="e">
+            </div>
+            <hr/>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Current Name:</label>
+              <br/>
+              <h3>{{ name }}</h3>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Update Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter New Email" formControlName="n">
+            </div>
+            <hr/>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Update Password:</label>
+              <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter New Email" formControlName="p">
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="[editUser(editU.value), closePopup()]">
+          Update
+        </button>
+        <button type="button" class="btn btn-danger" (click)="deleteU(editU.value)">
+          Delete Account
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

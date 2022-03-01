@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-1" routerLink="/admin" style="margin-left: 4rem; font-weight: bold;" >ArtBlogs!!!</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/admin" style="cursor: pointer;">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/userdata" style="cursor: pointer; width: 100%;">View Users</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>  -->
+          <button type="button" class="btn btn-success btn-md float-right" style="margin-left: 50rem; cursor: pointer;"(click)="adminUserData()"
+            >ViewUsers</button>
+            <button type="button" class="btn btn-success btn-md float-right" style="cursor: pointer;" (click)="logout()"
+            >Logout</button>
+        </ul>
+      </div>
+    </div>
+  </nav>

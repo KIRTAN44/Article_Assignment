@@ -1,0 +1,78 @@
+<app-initialpage></app-initialpage>
+<div class="container">
+  <h1>Welcome to ARTBLOGS!!!</h1>
+  <p style="text-align: center">
+    Here, you will find amazing articles regarding coding, life and many more...
+  </p>
+</div>
+<hr />
+<pagination-controls (pageChange) = "p = $event" style="text-align: center;"></pagination-controls>
+<div class="card-group row">
+  <div class="col-md-3 article" *ngFor="let article of articles | paginate: {itemsPerPage:10, currentPage:p};">
+    <div class="card mb-4 text-white bg-dark">
+      <img
+        class="card-img-top"
+        src="https://cdn.pixabay.com/photo/2017/04/23/09/31/newspaper-2253409_960_720.jpg"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ article.title }}</h5>
+        <button
+          (click)="[goToArticle(article), openModal()]"
+          class="btn btn-outline-light btn-sm"
+        >
+          Read More
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ display: display }">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ art.title }}</h4>
+        <button
+          type="button"
+          class="close btn-primary"
+          aria-label="Close"
+          (click)="[onCloseHandled(), div2Function()]"
+          style="background-color: transparent; color: black"
+        >
+          <span aria-hidden="true" style="font-size: x-large">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="text-align: justify;">{{ art.content }}</p>
+      </div>
+      <h6 style="margin-right: 280px" style="float: left; margin-left: 10px">
+        Written by: {{ uname }}
+      </h6>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="float: left; width: 130px"
+          (click)="[viewAuthor(), profileData(), div1Function()]"
+        >
+          Author Details
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="[onCloseHandled(), div2Function()]"
+          style="float: right; width: 130px"
+        >
+          Close
+        </button>
+      </div>
+      <div *ngIf="div1" class="container" style="text-align: center">
+        <h6>{{ udata }}</h6>
+        <h6>{{ udata2 }}</h6>
+      </div>
+    </div>
+  </div>
+</div>
+<pagination-controls (pageChange) = "p = $event" style="text-align: center;"></pagination-controls>
+
+<app-footer></app-footer>

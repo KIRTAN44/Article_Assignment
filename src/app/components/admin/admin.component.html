@@ -1,0 +1,126 @@
+<app-initialpage3></app-initialpage3>
+<div class="container">
+    <h1 style="text-align: center; margin-top: 10px;">Welcome to ARTBLOGS Admin Page</h1>
+    <p style="text-align: center">
+      Here, you will find amazing articles regarding coding, life and many more...
+    </p>
+  </div>
+  <hr />
+<!-- <pagination-controls (pageChange) = "p = $event" style="text-align: center;"></pagination-controls> -->
+  <div class="card-group row">
+    <div class="col-md-3 article" *ngFor="let article of articles | paginate: {itemsPerPage:10, currentPage:p};">
+      <div class="card mb-4 text-white bg-dark">
+        <img
+          class="card-img-top"
+          src="https://cdn.pixabay.com/photo/2017/04/23/09/31/newspaper-2253409_960_720.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <button
+            (click)="[goToArticle(article), openModal()]"
+            class="btn btn-outline-light btn-sm"
+          >
+            Read More
+          </button>
+          <button
+            class="btn btn-success btn-outline-light btn-sm"
+            (click)="openPopup2(article)"
+          >
+            Update
+          </button>
+          <button
+            class="btn btn-danger btn-outline-light btn-sm"
+            (click)="deleteArticle(article)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ display: display }">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{ art.title }}</h4>
+          <button
+            type="button"
+            class="close btn-primary"
+            aria-label="Close"
+            (click)="[onCloseHandled(), div2Function()]"
+            style="background-color: transparent; color: black"
+          >
+            <span aria-hidden="true" style="font-size: x-large">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: justify;">
+          <p>{{ art.content }}</p>
+        </div>
+        <h6 style="margin-right: 280px" style="float: left; margin-left: 10px">
+          Written by: {{ uname }}
+        </h6>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="float: left; width: 130px"
+            (click)="[viewAuthor(), profileData(), div1Function()]"
+          >
+            Author Details
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="[onCloseHandled(), div2Function()]"
+            style="float: right; width: 130px"
+          >
+            Close
+          </button>
+        </div>
+        <div *ngIf="div1" class="container" style="text-align: center">
+          <h6>{{ udata }}</h6>
+          <h6>{{ udata2 }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Update User's Article</h4>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editAA" novalidate>
+            <label>previously Written title:</label>
+            <h2 style="text-align: justify;">{{abc}}</h2>
+            <label>Update title:</label>
+            <textarea class="form-control" rows="1" formControlName="t"></textarea>
+            <br/>
+            <label>previously Written content:</label>
+            <h4 style="text-align: justify;">{{abc2}}</h4>
+            <label>Update content:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="c"></textarea>
+            </form>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" 
+        (click)="[closePopup2(),editAdminArticle(editAA.value)]">
+            Update
+            </button>
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopup2()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<pagination-controls (pageChange) = "p = $event" style="text-align: center;"></pagination-controls>
