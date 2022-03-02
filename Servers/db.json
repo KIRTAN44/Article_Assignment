@@ -1,0 +1,108 @@
+{
+  "user": [
+    {
+      "email": "john_abc@abc.com",
+      "name": "john",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "John Miller",
+      "email": "daku@daku.com",
+      "password": "11",
+      "id": 2
+    },
+    {
+      "name": "ax",
+      "email": "ax@ax.com",
+      "password": "12",
+      "id": 3
+    },
+    {
+      "name": "Sahil Patel",
+      "email": "sp@ei.com",
+      "password": "111111",
+      "id": 4
+    },
+    {
+      "name": "Anjali Verma",
+      "email": "aj@ei.com",
+      "password": "111111",
+      "id": 5
+    },
+    {
+      "name": "kirtan",
+      "email": "kirtan@ei.com",
+      "password": "111111",
+      "id": 6
+    }
+  ],
+  "articles": [
+    {
+      "userID": 1,
+      "title": "Teachers play a critical role in shaping girls’ future as coders",
+      "content": "It doesn’t take long to help girls see a future for themselves in computer science, but it depends largely on how good their teachers are at recognizing the skills the girls have in coding, which is basically writing language for computers. We found that girls ages 10 to 12 can come to see themselves as coders in as little as a week. And there are diverse roles within the world of coding that allow girls with various personalities and skill sets to see themselves as coders. However, if educators recognize girls only for when they play a background role and help others, but not when they are more assertive and confident, then they may not develop their assertiveness and confidence in a way that enables them to succeed as coders.",
+      "id": 1
+    },
+    {
+      "userID": 2,
+      "title": "Google and Microsoft are creating a monopoly on coding in plain language",
+      "content": " Sometimes major shifts happen virtually unnoticed. On May 5, IBM announced Project CodeNet to very little media or academic attention.CodeNet is a follow-up to ImageNet, a large-scale dataset of images and their descriptions; the images are free for non-commercial uses. ImageNet is now central to the progress of deep learning computer vision.CodeNet is an attempt to do for Artifical Intelligence (AI) coding what ImageNet did for computer vision: it is a dataset of over 14 million code samples, covering 50 programming languages, intended to solve 4,000 coding problems. The dataset also contains numerous additional data, such as the amount of memory required for software to run and log outputs of running code. ",
+      "id": 3
+    },
+    {
+      "title": "Curious Kids: how do mobile phones and tablets work?",
+      "content": "Great question, Tom! There’s a lot of amazing technology packed into mobile phones and tablets. Nowadays, most have a touch screen, speakers, a microphone, WiFi, Bluetooth, a camera, a telephone and more.",
+      "userID": 6,
+      "id": 4
+    },
+    {
+      "title": "Trust Me, I’m An Expert: How augmented reality may one day make music a visual, interactive experience",
+      "content": "Today’s episode of Trust Me, I’m An Expert is all about research on music. We’ll be hearing from Dr Ben Swift, a digital artist and computer science lecturer from the Australian National University on how technology is changing the way we interact with music. Could it one day be something we experience through augmented reality, responding to the way we move through the world? Sound supplemented with colours and shapes?",
+      "userID": 6,
+      "id": 5
+    },
+    {
+      "title": "Beware the digital entrepreneurs who are opening their own schools",
+      "content": "To children who love computer games, it could be a dream come true. In early February, Nicky Morgan, secretary of state for education, announced plans to open two new free schools focusing on computer programming skills in 2017. The schools – in London and Bournemouth – are founded by Ian Livingstone, a video-games entrepreneur, who was also a major player in the recent introduction of computing as a subject in the English national curriculum.",
+      "userID": 6,
+      "id": 6
+    },
+    {
+      "title": "What would a 21st-century education look like under PM Turnbull?",
+      "content": "Ensuring the end-game assessments of schooling don’t kill the potential for innovative learning for students is an important leap into 21st-century education. Regurgitation of facts and memorised responses pumped out by individuals in silence and isolation in an exam room is at odds with authentic 21st-century skills like collaboration and teamwork. Students need detailed and constructive feedback in real time.",
+      "userID": 4,
+      "id": 7
+    },
+    {
+      "title": "What Is Coding? A Brief Guide To The Facet Of Computer Programming",
+      "content": "Coding is a relatively technical field of study that typically requires a minimum of a four-year degree to effectively work as a programmer, though this isn't mandatory. Some coders are self-taught or start with a more modest two-year program and then learn on the job. But at its core, computer programming is a fairly straightforward task.",
+      "userID": 6,
+      "id": 8
+    },
+    {
+      "title": "Learn to Code on Your Own Time with This eBook Bundle",
+      "content": "If you were to examine a list of some of the most important skills to learn for the modern workplace, you may not be surprised to see that coding makes up a huge chunk of them. Learning to code can be a huge boon for your business, no matter what it does. You don't have to be a digital business to benefit from technology.",
+      "userID": 4,
+      "id": 9
+    },
+    {
+      "title": "5 ways to break into the video game industry",
+      "content": "When you break out the game console to play a video game like NBA2K, chances are the biggest decision you’ll have to make is which player or team you want to be. But have you ever considered becoming one of the people who actually designs a game like NBA2K?",
+      "userID": 6,
+      "id": 10
+    },
+    {
+      "title": "Bootstrap Text",
+      "content": "Additionally, Bootstrap also includes an .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto.",
+      "userID": 3,
+      "id": 11
+    },
+    {
+      "title": "Trust Me, I’m An Expert: How augmented reality may one day make music a visual, interactive experience",
+      "content": "Today’s episode of Trust Me, I’m An Expert is all about research on music. We’ll be hearing from Dr Ben Swift, a digital artist and computer science lecturer from the Australian National University on how technology is changing the way we interact with music. Could it one day be something we experience through augmented reality, responding to the way we move through the world? Sound supplemented with colours and shapes?",
+      "userID": 6,
+      "id": 12
+    }
+  ]
+}
